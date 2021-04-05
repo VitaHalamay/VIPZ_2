@@ -30,16 +30,16 @@ int main() {
 
     switch (nChoice) {
         case 1:
-            printTableInFile("All students before ordering", 1, pFile);
+            PrintTableInFile("All students before ordering", 1, pFile);
             OrderByBirthdayAscending(pFirstItem);
-            printTableInFile("All students after ordering", 1, pFile);
-            printTableInFile("Students with marks lower then average group mark", 0, pFile);
+            PrintTableInFile("All students after ordering", 1, pFile);
+            PrintTableInFile("Students with marks lower then average group mark", 0, pFile);
             InsertStudent(sStudent1);
             InsertStudent(sStudent2);
             InsertStudent(sStudent3);
-            printTableInFile("Students after inserting", 1, pFile);
+            PrintTableInFile("Students after inserting", 1, pFile);
             DeleteStudentWithout5();
-            printTableInFile("Students after deleting", 1, pFile);
+            PrintTableInFile("Students after deleting", 1, pFile);
             fclose(pFile);
             break;
         case 0:
@@ -54,7 +54,8 @@ int main() {
             DeleteStudentWithout5();
             PrintTable("Students after deleting", 1);
             break;
-        default:printf("Wrong input!");
+        default:
+            printf("Wrong input!");
     }
     return 0;
 
